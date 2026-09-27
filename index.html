@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy - Metadata Impact Analyzer</title>
+  <meta name="description" content="Privacy policy for Metadata Impact Analyzer, a Chrome extension for Salesforce change-risk analysis.">
+  <style>
+    body{font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:860px;margin:48px auto;padding:0 22px;color:#17233a;background:#fff}
+    h1,h2{color:#071426}a{color:#245bdb}.muted{color:#64748b}.note{background:#f6f8fc;border-left:4px solid #245bdb;padding:14px 16px;border-radius:8px}code{background:#f2f4f7;padding:2px 5px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — Metadata Impact Analyzer</h1>
+  <p class="muted">Last updated: September 27, 2026</p>
+  <p>Metadata Impact Analyzer is a Chrome extension for Salesforce developers, architects, consultants, and release managers. It is designed to minimize data collection and does not operate a developer-hosted application server or database for core analysis.</p>
+
+  <div class="note"><strong>Summary:</strong> Core dependency extraction, risk scoring, graph generation, and regression-test recommendations run locally in the browser. Optional AI explanation is disabled by default. Licensing is validated directly with Lemon Squeezy.</div>
+
+  <h2>1. Local analysis</h2>
+  <p>Core dependency extraction, risk scoring, graph generation, and regression-test recommendations run in the user's browser using metadata or code the user provides, or structured content the user deliberately asks the extension to extract from a recognized Salesforce page.</p>
+
+  <h2>2. Salesforce content</h2>
+  <p>The extension does not intentionally scrape arbitrary Salesforce page text. Active-tab extraction is conservative and targets recognized structured code or metadata content. Users may also paste Apex, Flow XML, JSON, XML, or other supported metadata directly into the extension.</p>
+
+  <h2>3. Optional OpenAI processing</h2>
+  <p>AI explanation is optional and disabled by default. When a user enables AI explanation, locally derived dependency evidence is sent directly from the user's browser to OpenAI using the user's own OpenAI API key. Raw source code or metadata is excluded by default and is sent only when the user separately enables the raw-source option. OpenAI's terms and privacy practices apply to that direct API use.</p>
+
+  <h2>4. OpenAI API keys</h2>
+  <p>The OpenAI API key is held in Chrome session storage by default. A user may explicitly choose to remember the key on the device, in which case it is stored in Chrome local storage. Metadata Impact Analyzer does not operate a server that receives or stores the user's OpenAI API key.</p>
+
+  <h2>5. Licensing and payments</h2>
+  <p>Paid purchases and checkout are handled by Lemon Squeezy. License activation and validation are performed directly against Lemon Squeezy's licensing service. License identifiers, entitlement information, validation timestamps, and related activation state may be stored locally in Chrome storage so the extension can remember Pro access and support a limited offline grace period after a successful validation. Lemon Squeezy's own terms and privacy practices apply to checkout, payment, and licensing services.</p>
+
+  <h2>6. Local storage and retention</h2>
+  <p>The extension may store workspace state, settings, monthly free-usage counters, license state, and user preferences locally in Chrome storage so the side-panel experience can persist across tab switches and browser sessions. Users can remove the extension or clear its extension storage through Chrome to remove locally stored application state.</p>
+
+  <h2>7. Analytics and advertising</h2>
+  <p>The current product does not include third-party advertising trackers and does not operate a developer-hosted behavioral analytics backend.</p>
+
+  <h2>8. Data selling</h2>
+  <p>Metadata Impact Analyzer does not sell user data.</p>
+
+  <h2>9. Product website and support</h2>
+  <p>Product information, pricing, and a demonstration are available on the <a href="product/">Metadata Impact Analyzer product page</a>.</p>
+  <p>For privacy or support questions, contact <a href="mailto:vinod.sfdc26@gmail.com">vinod.sfdc26@gmail.com</a>.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>This policy may be updated when product functionality, third-party services, or legal requirements change. The "Last updated" date above indicates the latest revision.</p>
+</body>
+</html>
