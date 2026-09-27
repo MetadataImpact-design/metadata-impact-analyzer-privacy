@@ -1,51 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Privacy Policy - Metadata Impact Analyzer</title>
-  <meta name="description" content="Privacy policy for Metadata Impact Analyzer, a Chrome extension for Salesforce change-risk analysis.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metadata Impact Analyzer — Salesforce Change Risk Intelligence</title>
+  <meta name="description" content="Metadata Impact Analyzer is a Chrome extension for Salesforce developers, architects, and release managers that analyzes Apex and metadata changes, maps dependencies, scores deployment risk, and recommends regression tests." />
   <style>
-    body{font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:860px;margin:48px auto;padding:0 22px;color:#17233a;background:#fff}
-    h1,h2{color:#071426}a{color:#245bdb}.muted{color:#64748b}.note{background:#f6f8fc;border-left:4px solid #245bdb;padding:14px 16px;border-radius:8px}code{background:#f2f4f7;padding:2px 5px;border-radius:4px}
+    :root{--bg:#071426;--card:#0d203a;--card2:#102846;--text:#f6f9ff;--muted:#9fb4cf;--line:#244160;--blue:#5a6cff;--blue2:#2278ff;--green:#18c37e;--orange:#ff5a36;--white:#fff}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#061222,#0b1730 48%,#071426);color:var(--text);line-height:1.55}
+    a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 24px}.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand img{width:42px;height:42px;border-radius:10px}.navlinks{display:flex;gap:20px;color:var(--muted);font-size:14px}.navlinks a{text-decoration:none}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:72px 0 52px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#8fb3ff}.hero h1{font-size:54px;line-height:1.02;margin:12px 0 18px;letter-spacing:-.04em}.hero p{font-size:20px;color:var(--muted);max-width:680px}.pills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.pill{border:1px solid var(--line);background:#0a1b31;padding:8px 12px;border-radius:999px;font-size:13px;color:#c9d9ec}.cta{display:inline-flex;gap:12px;align-items:center;margin-top:6px}.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:750}.btn.primary{background:linear-gradient(135deg,var(--blue2),var(--blue));color:#fff}.btn.secondary{border:1px solid var(--line);color:#dce9fa}.panelshot{background:#0d1d34;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 30px 80px rgba(0,0,0,.32)}.panelshot img{display:block;width:100%;border-radius:14px}
+    section{padding:62px 0}.section-title{font-size:34px;margin:0 0 12px;letter-spacing:-.025em}.section-copy{color:var(--muted);max-width:760px;margin:0 0 28px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card2),var(--card));border-radius:16px;padding:22px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0}.icon{font-size:24px;margin-bottom:12px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}.flow .step{border:1px solid var(--line);background:#0b1c33;border-radius:14px;padding:16px;text-align:center;font-weight:700;font-size:14px}.arrow{display:none}
+    .video{background:#050d18;border:1px solid var(--line);border-radius:18px;padding:12px;overflow:hidden}.video video{width:100%;display:block;border-radius:12px;background:#000}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price{position:relative}.price.best{outline:2px solid #5672ff}.badge{display:inline-block;font-size:11px;letter-spacing:.08em;font-weight:900;padding:5px 8px;border-radius:999px;background:#17376a;color:#acd0ff}.price h3{font-size:20px}.amount{font-size:38px;font-weight:900;margin:8px 0}.amount span{font-size:15px;color:var(--muted);font-weight:600}.features{padding:0;margin:16px 0 0;list-style:none;color:#cbdcf0}.features li{margin:8px 0}.features li:before{content:"✓";color:var(--green);margin-right:8px;font-weight:900}.security{display:grid;grid-template-columns:1fr 1fr;gap:20px}.note{border-left:3px solid var(--blue2);padding:14px 16px;background:#0a1b31;color:#bfd1e7;border-radius:0 10px 10px 0}.footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:13px}.footerlinks{display:flex;gap:16px;flex-wrap:wrap}.small{font-size:13px;color:var(--muted)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:42px}.hero h1{font-size:42px}.grid3,.pricing,.security{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.navlinks{display:none}}
   </style>
 </head>
 <body>
-  <h1>Privacy Policy — Metadata Impact Analyzer</h1>
-  <p class="muted">Last updated: September 27, 2026</p>
-  <p>Metadata Impact Analyzer is a Chrome extension for Salesforce developers, architects, consultants, and release managers. It is designed to minimize data collection and does not operate a developer-hosted application server or database for core analysis.</p>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand"><img src="assets/logo.png" alt="Metadata Impact Analyzer logo"><span>Metadata Impact Analyzer</span></div>
+      <div class="navlinks"><a href="#product">Product</a><a href="#demo">Demo</a><a href="#pricing">Pricing</a><a href="#security">Security</a></div>
+    </nav>
 
-  <div class="note"><strong>Summary:</strong> Core dependency extraction, risk scoring, graph generation, and regression-test recommendations run locally in the browser. Optional AI explanation is disabled by default. Licensing is validated directly with Lemon Squeezy.</div>
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Salesforce change risk intelligence</div>
+        <h1>Know what can break before you deploy.</h1>
+        <p>A Chrome extension for Salesforce developers, architects, consultants, and release managers. Analyze Apex and metadata changes, map dependency evidence, score deployment risk, and get focused regression-test recommendations before release.</p>
+        <div class="pills"><span class="pill">Manifest V3</span><span class="pill">Deterministic local analysis</span><span class="pill">Optional AI explanation</span><span class="pill">No developer-hosted backend</span></div>
+        <div class="cta"><a class="btn primary" href="#demo">Watch demo</a><a class="btn secondary" href="#pricing">View pricing</a></div>
+      </div>
+      <div class="panelshot"><img src="assets/side-panel.png" alt="Metadata Impact Analyzer running in the Chrome side panel"></div>
+    </header>
 
-  <h2>1. Local analysis</h2>
-  <p>Core dependency extraction, risk scoring, graph generation, and regression-test recommendations run in the user's browser using metadata or code the user provides, or structured content the user deliberately asks the extension to extract from a recognized Salesforce page.</p>
+    <section id="product">
+      <h2 class="section-title">Built for safer Salesforce changes</h2>
+      <p class="section-copy">Metadata Impact Analyzer turns a proposed code or metadata change into a compact pre-deployment risk review. The deterministic engine extracts observable evidence first; optional AI is layered on top for explanation and additional test guidance.</p>
+      <div class="grid3">
+        <div class="card"><div class="icon">◎</div><h3>Dependency evidence</h3><p>Detects object/field references, SOQL, DML, Apex collaborators, Flow XML references, callouts, async execution, and other change signals from supplied metadata.</p></div>
+        <div class="card"><div class="icon">⚠</div><h3>Risk & confidence</h3><p>Produces an evidence-based High, Medium, Low, or Unknown risk result plus confidence and clear scope language. Unknown is never silently treated as Low.</p></div>
+        <div class="card"><div class="icon">✓</div><h3>Regression-test plan</h3><p>Recommends focused tests for writes, automation, integrations, asynchronous behavior, security enforcement, formulas, and referenced components.</p></div>
+      </div>
+    </section>
 
-  <h2>2. Salesforce content</h2>
-  <p>The extension does not intentionally scrape arbitrary Salesforce page text. Active-tab extraction is conservative and targets recognized structured code or metadata content. Users may also paste Apex, Flow XML, JSON, XML, or other supported metadata directly into the extension.</p>
+    <section>
+      <h2 class="section-title">Simple workflow</h2>
+      <div class="flow">
+        <div class="step">1. Paste Apex / Flow XML / metadata</div><div class="step">2. Analyze locally</div><div class="step">3. Review blast radius</div><div class="step">4. Check recommended tests</div><div class="step">5. Export impact report</div>
+      </div>
+    </section>
 
-  <h2>3. Optional OpenAI processing</h2>
-  <p>AI explanation is optional and disabled by default. When a user enables AI explanation, locally derived dependency evidence is sent directly from the user's browser to OpenAI using the user's own OpenAI API key. Raw source code or metadata is excluded by default and is sent only when the user separately enables the raw-source option. OpenAI's terms and privacy practices apply to that direct API use.</p>
+    <section id="demo">
+      <h2 class="section-title">Product demo</h2>
+      <p class="section-copy">A short walkthrough of the Chrome side-panel experience, deterministic risk analysis, optional AI explanation, and paid report workflow.</p>
+      <div class="video"><video controls playsinline preload="metadata" poster="assets/demo-poster.png"><source src="assets/metadata-impact-analyzer-demo.mp4" type="video/mp4">Your browser does not support embedded MP4 video.</video></div>
+    </section>
 
-  <h2>4. OpenAI API keys</h2>
-  <p>The OpenAI API key is held in Chrome session storage by default. A user may explicitly choose to remember the key on the device, in which case it is stored in Chrome local storage. Metadata Impact Analyzer does not operate a server that receives or stores the user's OpenAI API key.</p>
+    <section id="pricing">
+      <h2 class="section-title">Pricing</h2>
+      <p class="section-copy">Pricing planned for launch. All paid plans use license-key activation and allow up to two device/browser activations per license.</p>
+      <div class="pricing">
+        <div class="card price"><span class="badge">FREE</span><h3>Free</h3><div class="amount">$0</div><ul class="features"><li>3 complete analyses per calendar month</li><li>Deterministic risk scoring</li><li>Dependency graph</li><li>Regression-test recommendations</li></ul></div>
+        <div class="card price best"><span class="badge">BEST VALUE</span><h3>Pro Annual</h3><div class="amount">$79<span>/year</span></div><ul class="features"><li>Unlimited analyses</li><li>Optional AI explanations using your OpenAI key</li><li>Exportable impact reports</li><li>Save $29 vs monthly billing</li></ul></div>
+        <div class="card price"><span class="badge">FOUNDING OFFER</span><h3>Founding Lifetime</h3><div class="amount">$99<span> one-time</span></div><ul class="features"><li>Lifetime Pro access</li><li>Unlimited analyses</li><li>AI explanation option</li><li>Impact-report export</li></ul></div>
+      </div>
+      <p class="small" style="margin-top:14px">Also available: Pro Monthly at <strong>$9/month</strong>. Subscription plans renew until canceled. Taxes may apply at checkout. The lifetime offer is intended as a limited launch promotion.</p>
+    </section>
 
-  <h2>5. Licensing and payments</h2>
-  <p>Paid purchases and checkout are handled by Lemon Squeezy. License activation and validation are performed directly against Lemon Squeezy's licensing service. License identifiers, entitlement information, validation timestamps, and related activation state may be stored locally in Chrome storage so the extension can remember Pro access and support a limited offline grace period after a successful validation. Lemon Squeezy's own terms and privacy practices apply to checkout, payment, and licensing services.</p>
+    <section id="security">
+      <h2 class="section-title">Architecture & data handling</h2>
+      <div class="security">
+        <div class="card"><h3>Backend-free product architecture</h3><p>The extension does not operate a developer-hosted application server or database. Core dependency evidence and risk scoring run in the browser.</p></div>
+        <div class="card"><h3>Optional BYOK AI</h3><p>AI explanation is optional and off by default. When enabled, dependency evidence is sent directly from the browser to OpenAI using the user's own API key. Sending raw source is a separate opt-in setting.</p></div>
+      </div>
+      <div class="note" style="margin-top:18px">The tool analyzes only the metadata/code evidence supplied or deliberately extracted from recognized structured Salesforce content. Results do not claim org-wide completeness unless that evidence is present.</div>
+    </section>
 
-  <h2>6. Local storage and retention</h2>
-  <p>The extension may store workspace state, settings, monthly free-usage counters, license state, and user preferences locally in Chrome storage so the side-panel experience can persist across tab switches and browser sessions. Users can remove the extension or clear its extension storage through Chrome to remove locally stored application state.</p>
+    <section>
+      <h2 class="section-title">Who it is for</h2>
+      <div class="grid3">
+        <div class="card"><h3>Developers & architects</h3><p>Quickly assess a proposed Apex, Flow, object, or field change before deployment.</p></div>
+        <div class="card"><h3>Consultants & SIs</h3><p>Produce a repeatable risk-and-test review that can be attached to client change documentation.</p></div>
+        <div class="card"><h3>Release managers</h3><p>Use a structured pre-deployment signal to focus regression testing and release review.</p></div>
+      </div>
+    </section>
 
-  <h2>7. Analytics and advertising</h2>
-  <p>The current product does not include third-party advertising trackers and does not operate a developer-hosted behavioral analytics backend.</p>
-
-  <h2>8. Data selling</h2>
-  <p>Metadata Impact Analyzer does not sell user data.</p>
-
-  <h2>9. Product website and support</h2>
-  <p>Product information, pricing, and a demonstration are available on the <a href="product/">Metadata Impact Analyzer product page</a>.</p>
-  <p>For privacy or support questions, contact <a href="mailto:vinod.sfdc26@gmail.com">vinod.sfdc26@gmail.com</a>.</p>
-
-  <h2>10. Changes to this policy</h2>
-  <p>This policy may be updated when product functionality, third-party services, or legal requirements change. The "Last updated" date above indicates the latest revision.</p>
+    <footer class="footer">
+      <div class="footerlinks"><a href="../">Privacy Policy</a><a href="terms.html">Terms of Sale</a><a href="mailto:vinod.sfdc26@gmail.com">Support</a></div>
+      <p>© 2026 Metadata Impact Analyzer. Independent product; not affiliated with or endorsed by Salesforce, Google, OpenAI, or Lemon Squeezy.</p>
+    </footer>
+  </div>
 </body>
 </html>
