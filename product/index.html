@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Metadata Impact Analyzer — Salesforce Change Risk Intelligence</title>
-  <meta name="description" content="Metadata Impact Analyzer is a Chrome extension for Salesforce developers, architects, and release managers that analyzes Apex and metadata changes, maps dependencies, scores deployment risk, and recommends regression tests." />
+  <title>Metadata Impact Analyzer — Salesforce Pre-Deployment Risk Checks</title>
+  <meta name="description" content="Check Salesforce Apex and Flow XML risk before deployments. Find observable dependencies, identify testing needs and generate an impact report. Install free in Chrome." />
   <style>
     :root{--bg:#071426;--card:#0d203a;--card2:#102846;--text:#f6f9ff;--muted:#9fb4cf;--line:#244160;--blue:#5a6cff;--blue2:#2278ff;--green:#18c37e;--orange:#ff5a36;--white:#fff}
     *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#061222,#0b1730 48%,#071426);color:var(--text);line-height:1.55}
@@ -18,7 +18,7 @@
   <div class="wrap">
     <nav class="nav">
       <div class="brand"><img src="assets/logo.png" alt="Metadata Impact Analyzer logo"><span>Metadata Impact Analyzer</span></div>
-      <div class="navlinks"><a href="#product">Product</a><a href="#demo">Demo</a><a href="#pricing">Pricing</a><a href="#security">Security</a></div>
+      <div class="navlinks"><a href="https://chromewebstore.google.com/detail/metadata-impact-analyzer/bnichlnpjfenlgdgjdmcdojbggnfenlf?utm_source=website&utm_medium=owned&utm_campaign=launch_oct2026" target="_blank" rel="noopener">Install Free</a><a href="#product">Product</a><a href="#demo">Demo</a><a href="#pricing">Pricing</a><a href="#security">Security</a></div>
     </nav>
 
     <header class="hero">
@@ -27,7 +27,7 @@
         <h1>Know what can break before you deploy.</h1>
         <p>A Chrome extension for Salesforce developers, architects, consultants, and release managers. Analyze Apex and metadata changes, map dependency evidence, score deployment risk, and get focused regression-test recommendations before release.</p>
         <div class="pills"><span class="pill">Manifest V3</span><span class="pill">Deterministic local analysis</span><span class="pill">Optional AI explanation</span><span class="pill">No developer-hosted backend</span></div>
-        <div class="cta"><a class="btn primary" href="#demo">Watch demo</a><a class="btn secondary" href="#pricing">View pricing</a></div>
+        <div class="cta"><a class="btn primary" href="https://chromewebstore.google.com/detail/metadata-impact-analyzer/bnichlnpjfenlgdgjdmcdojbggnfenlf?utm_source=website&utm_medium=owned&utm_campaign=launch_oct2026" target="_blank" rel="noopener">Add to Chrome — Free</a><a class="btn secondary" href="#demo">Watch demo</a></div><p class="small" style="margin-top:14px">No signup or OpenAI key needed for local analysis. 3 free analyses every month.</p>
       </div>
       <div class="panelshot"><img src="assets/side-panel.png" alt="Metadata Impact Analyzer running in the Chrome side panel"></div>
     </header>
@@ -45,7 +45,7 @@
     <section>
       <h2 class="section-title">Simple workflow</h2>
       <div class="flow">
-        <div class="step">1. Paste Apex / Flow XML / metadata</div><div class="step">2. Analyze locally</div><div class="step">3. Review blast radius</div><div class="step">4. Check recommended tests</div><div class="step">5. Export impact report</div>
+        <div class="step">1. Paste Apex / Flow XML / metadata</div><div class="step">2. Analyze locally</div><div class="step">3. Review observed dependencies &amp; risk</div><div class="step">4. Check recommended tests</div><div class="step">5. Export report (Pro)</div>
       </div>
     </section>
 
@@ -57,13 +57,13 @@
 
     <section id="pricing">
       <h2 class="section-title">Pricing</h2>
-      <p class="section-copy">Pricing planned for launch. All paid plans use license-key activation and allow up to two device/browser activations per license.</p>
+      <p class="section-copy">Available now. Start free without payment. Upgrade only when you need unlimited analysis or exported reports. Each paid license supports two browser/device activations.</p>
       <div class="pricing">
-        <div class="card price"><span class="badge">FREE</span><h3>Free</h3><div class="amount">$0</div><ul class="features"><li>3 complete analyses per calendar month</li><li>Deterministic risk scoring</li><li>Dependency graph</li><li>Regression-test recommendations</li></ul></div>
-        <div class="card price best"><span class="badge">BEST VALUE</span><h3>Pro Annual</h3><div class="amount">$79<span>/year</span></div><ul class="features"><li>Unlimited analyses</li><li>Optional AI explanations using your OpenAI key</li><li>Exportable impact reports</li><li>Save $29 vs monthly billing</li></ul></div>
-        <div class="card price"><span class="badge">FOUNDING OFFER</span><h3>Founding Lifetime</h3><div class="amount">$99<span> one-time</span></div><ul class="features"><li>Lifetime Pro access</li><li>Unlimited analyses</li><li>AI explanation option</li><li>Impact-report export</li></ul></div>
+        <div class="card price"><span class="badge">FREE</span><h3>Free</h3><div class="amount">$0</div><ul class="features"><li>3 complete analyses per calendar month</li><li>Deterministic risk scoring</li><li>Dependency graph</li><li>Regression-test recommendations</li></ul><p style="margin-top:16px"><a class="btn primary" href="https://chromewebstore.google.com/detail/metadata-impact-analyzer/bnichlnpjfenlgdgjdmcdojbggnfenlf?utm_source=website&utm_medium=owned&utm_campaign=launch_oct2026" target="_blank" rel="noopener">Install Free</a></p></div>
+        <div class="card price best"><span class="badge">BEST VALUE</span><h3>Pro Annual</h3><div class="amount">$79<span>/year</span></div><ul class="features"><li>Unlimited analyses</li><li>Optional AI explanations using your OpenAI key</li><li>Exportable impact reports</li><li>Save $29 vs monthly billing</li></ul><p style="margin-top:16px"><a class="btn primary" href="https://metadataimpactanalyzer.lemonsqueezy.com/checkout/buy/3c9c76b4-27cc-4db6-8b95-e4cbcf9f7e7b" target="_blank" rel="noopener">Choose Annual</a></p></div>
+        <div class="card price"><span class="badge">FOUNDING OFFER</span><h3>Founding Lifetime</h3><div class="amount">$99<span> one-time</span></div><ul class="features"><li>Lifetime Pro access</li><li>Unlimited analyses</li><li>AI explanation option</li><li>Impact-report export</li></ul><p style="margin-top:16px"><a class="btn secondary" href="https://metadataimpactanalyzer.lemonsqueezy.com/checkout/buy/ca720703-a8d9-494c-86ad-73b67fd063dd" target="_blank" rel="noopener">Choose Lifetime</a></p></div>
       </div>
-      <p class="small" style="margin-top:14px">Also available: Pro Monthly at <strong>$9/month</strong>. Subscription plans renew until canceled. Taxes may apply at checkout. The lifetime offer is intended as a limited launch promotion.</p>
+      <p class="small" style="margin-top:14px">Also available: <a href="https://metadataimpactanalyzer.lemonsqueezy.com/checkout/buy/7477c9f6-29bc-4a15-9325-4f5fc0e3d08c" target="_blank" rel="noopener"><strong>Pro Monthly at $9/month</strong></a>. Subscription plans renew until canceled. Taxes may apply at checkout. The lifetime offer is intended as a limited launch promotion.</p>
     </section>
 
     <section id="security">
@@ -72,7 +72,7 @@
         <div class="card"><h3>Backend-free product architecture</h3><p>The extension does not operate a developer-hosted application server or database. Core dependency evidence and risk scoring run in the browser.</p></div>
         <div class="card"><h3>Optional BYOK AI</h3><p>AI explanation is optional and off by default. When enabled, dependency evidence is sent directly from the browser to OpenAI using the user's own API key. Sending raw source is a separate opt-in setting.</p></div>
       </div>
-      <div class="note" style="margin-top:18px">The tool analyzes only the metadata/code evidence supplied or deliberately extracted from recognized structured Salesforce content. Results do not claim org-wide completeness unless that evidence is present.</div>
+      <div class="note" style="margin-top:18px">Risk analysis is based on the metadata/code supplied or deliberately extracted from supported structured views. It is not a whole-org dependency audit, and its findings do not guarantee a deployment is safe.</div>
     </section>
 
     <section>
@@ -83,6 +83,8 @@
         <div class="card"><h3>Release managers</h3><p>Use a structured pre-deployment signal to focus regression testing and release review.</p></div>
       </div>
     </section>
+
+    <section style="padding:20px 0 56px;text-align:center"><h2 class="section-title">Try it on a sample Apex change</h2><p class="section-copy" style="margin-inline:auto">Install the extension, paste a small Apex class or Flow XML, and review the observed risk signals and regression tests in the Chrome side panel.</p><a class="btn primary" href="https://chromewebstore.google.com/detail/metadata-impact-analyzer/bnichlnpjfenlgdgjdmcdojbggnfenlf?utm_source=website&utm_medium=owned&utm_campaign=launch_oct2026" target="_blank" rel="noopener">Add to Chrome — 3 free analyses/month</a></section>
 
     <footer class="footer">
       <div class="footerlinks"><a href="../">Privacy Policy</a><a href="terms.html">Terms of Sale</a><a href="mailto:vinod.sfdc26@gmail.com">Support</a></div>
